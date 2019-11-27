@@ -346,16 +346,16 @@ angular.module('bitbloqOffline')
                 commonModals.launchNotSavedModal(function(confirmed) {
                     if (confirmed === 0) {
                         projectApi.save($scope.getCurrentProject(), function() {
-                            common.sendAnalyticsEvent('Close app');
+                            // common.sendAnalyticsEvent('Close app');
                             currentWindow.destroy();
                         });
                     } else if (confirmed === -1) {
-                        common.sendAnalyticsEvent('Close app');
+                        // common.sendAnalyticsEvent('Close app');
                         currentWindow.destroy();
                     }
                 });
             } else {
-                common.sendAnalyticsEvent('Close app');
+                // common.sendAnalyticsEvent('Close app');
                 currentWindow.destroy();
             }
         };

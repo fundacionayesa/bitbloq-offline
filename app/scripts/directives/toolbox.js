@@ -21,10 +21,10 @@ angular.module('bitbloqOffline')
 
                 self.select = function(menuId, advanced) {
                     if (advanced) {
-                        common.sendAnalyticsEvent('Open Toolbox', menuId + ' advanced');
+                        // common.sendAnalyticsEvent('Open Toolbox', menuId + ' advanced');
                         return (self.menuLevel = 2);
                     } else {
-                        common.sendAnalyticsEvent('Open Toolbox', menuId);
+                        // common.sendAnalyticsEvent('Open Toolbox', menuId);
                         self.menuLevel = 1;
                     }
                     if (self.activeMenu === menuId) {

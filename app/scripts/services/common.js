@@ -13,7 +13,7 @@ angular.module('bitbloqOffline')
         var exports = {};
         exports.settings = {};
         var fs = require('fs');
-        var ua = require('universal-analytics');
+        // var ua = require('universal-analytics');
         exports.analyticsVisitor;
 
 
@@ -30,7 +30,7 @@ angular.module('bitbloqOffline')
         exports.bloqsVersion = JSON.parse(fs.readFileSync(exports.appPath + '/bower.json', 'utf8')).dependencies.bloqs;
         exports.translate = $filter('translate');
 
-        _startAnalytics();
+        // _startAnalytics();
 
         exports.settings = JSON.parse(fs.readFileSync(exports.appPath + '/app/res/config.json', 'utf8'));
         exports.settings.zoomFactor = exports.settings.zoomFactor || 1;
@@ -51,30 +51,30 @@ angular.module('bitbloqOffline')
             });
         };
 
-        function _startAnalytics() {
-            if (!localStorage.analyticsVisitorUUID) {
-                localStorage.analyticsVisitorUUID = utils.generateUUID();
-            }
-            if (!exports.analyticsVisitor) {
-                exports.analyticsVisitor = ua('UA-20299199-1', localStorage.analyticsVisitorUUID);
-            }
+        // function _startAnalytics() {
+        //     if (!localStorage.analyticsVisitorUUID) {
+        //         localStorage.analyticsVisitorUUID = utils.generateUUID();
+        //     }
+        //     if (!exports.analyticsVisitor) {
+        //         exports.analyticsVisitor = ua('UA-20299199-1', localStorage.analyticsVisitorUUID);
+        //     }
 
-            exports.analyticsVisitor.pageview('/', 'bitbloqoffline.bq.com', 'Bitbloq offline start').send();
-            //240000 = 4 mins
-            setInterval(_preventAnalitycsToLoseUserActivity, 240000);
-        }
+        //     exports.analyticsVisitor.pageview('/', 'bitbloqoffline.bq.com', 'Bitbloq offline start').send();
+        //     //240000 = 4 mins
+        //     setInterval(_preventAnalitycsToLoseUserActivity, 240000);
+        // }
 
-        function _preventAnalitycsToLoseUserActivity() {
-            exports.analyticsVisitor.event({
-                documentHostName: 'bitbloqoffline.bq.com',
-                eventAction: 'Bitbloq offline still working',
-                eventCategory: 'im alive'
-            }).send();
-        }
+        // function _preventAnalitycsToLoseUserActivity() {
+        //     exports.analyticsVisitor.event({
+        //         documentHostName: 'bitbloqoffline.bq.com',
+        //         eventAction: 'Bitbloq offline still working',
+        //         eventCategory: 'im alive'
+        //     }).send();
+        // }
 
-        exports.sendAnalyticsEvent = function(eventName, eventData) {
-            exports.analyticsVisitor.pageview(eventName + '-' + eventData, 'bitbloqoffline.bq.com', 'Bitbloq offline event').send();
-        };
+        // exports.sendAnalyticsEvent = function(eventName, eventData) {
+        //     exports.analyticsVisitor.pageview(eventName + '-' + eventData, 'bitbloqoffline.bq.com', 'Bitbloq offline event').send();
+        // };
 
 
 
