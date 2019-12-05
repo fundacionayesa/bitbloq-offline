@@ -1,7 +1,7 @@
 'use strict';
 const electron = require('electron');
 const pjson = require('./package.json');
-const PRODUCT_NAME = 'Bitbloq Offline';
+const PRODUCT_NAME = 'FAbloq';
 const PRODUCT_NAME_WITH_VERSION = PRODUCT_NAME + ' v' + pjson.version;
 const app = electron.app; // Module to control application life.
 const BrowserWindow = electron.BrowserWindow; // Module to create native browser window.
