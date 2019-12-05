@@ -5,3 +5,14 @@ app/images/sprite.svg
 bower_components/
 app/res/config.json
 i18n/
+package-lock.json
+### VisualStudioCode ###
+.vscode/*
+!.vscode/settings.json
+!.vscode/tasks.json
+!.vscode/launch.json
+!.vscode/extensions.json
+
+### VisualStudioCode Patch ###
+# Ignore all local history of files
+.history
