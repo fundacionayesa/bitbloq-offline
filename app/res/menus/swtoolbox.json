@@ -230,6 +230,43 @@
         {
             "name": "zowiDistance"
         }]
+    },
+	{
+        "title": "robin",
+        "titleId": "robin",
+        "items": [
+        {
+            "name": "robinStop"
+        },
+		{
+            "name": "robinBuzzer"
+        },
+		{
+            "name": "robinHead"
+        },
+		{
+            "name": "robinIfDistance"
+        },
+		{
+            "name": "robinIfLine"
+        },
+		{
+            "name": "robinMovementsSimple"
+        }
+    ],
+        "advancedItems": [
+        {
+            "name": "robinHome"
+        },
+		{
+            "name": "robinDistance"
+        },
+		{
+            "name": "robinLine"
+        },
+		{
+            "name": "robinHeadAdvance"
+        }]
     }],
     "toolboxContents": [
     {
