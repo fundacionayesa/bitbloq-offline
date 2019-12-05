@@ -1176,5 +1176,12 @@
         "name": "Zowi",
         "width": 75,
         "height": 86
+    },
+    {
+        "id": "robin",
+        "name": "Robin",
+        "width": 90,
+        "height": 90,
+        "mcu": "uno"
     }]
 }

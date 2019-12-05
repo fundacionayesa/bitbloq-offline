@@ -1594,6 +1594,10 @@ code {
     .protocanvas .robot.zowi {
       background-image: url("../images/robots/zowi.svg");
       background-color: transparent; }
+    #robotSchema.robot--present.robin:not(.zowi){
+      background-image: url("../images/robots/robin.svg");
+      background-color: transparent;
+    }
     .protocanvas .robot.evolution {
       background-image: url("../images/robots/evolution.svg");
       background-color: transparent; }
