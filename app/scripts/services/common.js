@@ -19,8 +19,18 @@ angular.module('bitbloqOffline')
 
 
         exports.webPath = process.mainModule.filename.substring(0, process.mainModule.filename.lastIndexOf('/'));
+        console.log(exports.webPath);
+        if(!exports.webPath){
+            exports.webPath = process.mainModule.filename.substring(0, process.mainModule.filename.lastIndexOf('\\'));
+        }
+        console.log(exports.webPath);
 
         var app = exports.webPath.substring(0, exports.webPath.lastIndexOf('/'));
+        console.log(app);
+        if(!app){
+            app = exports.webPath.substring(0, exports.webPath.lastIndexOf('\\'));
+        }
+        console.log(app);
         var resources = process.resourcesPath + '/app/';
         exports.appPath = app || resources;
 
